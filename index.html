@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <div class="features">  
+	  <figure class="feature">
+      <div class="card">
+        <i class="dimmer"></i>
+        <div class="face front">
+          <input type="button" value="Flip It"/>
+        </div>
+        <div class="face back">Back</div>
+      </div>
+    </figure>
+    <figure class="feature">
+      <div class="card">
+        <i class="dimmer"></i>
+        <div class="face front">
+          <input type="button" value="Flip It"/>
+        </div>
+        <div class="face back">Back</div>
+      </div>
+    </figure>  
+  </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('input[type="button"]').click(function(){
+        if(!$('.feature').hasClass('active')){
+          $(this)
+          .closest('.feature')
+          .addClass('active')
+          .siblings().addClass('inactive')
+        }
+        else {
+          $(this)
+          .closest('.feature')
+          .removeClass('inactive')
+          .siblings().removeClass('active')
+        } 
+      })
+      
+      $('.dimmer').click(function(){
+        $('.feature').removeClass('active').removeClass('inactive')
+      })
+    })
+  </script>
+</body>
+</html>

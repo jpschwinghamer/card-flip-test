@@ -1,0 +1,115 @@
+@import compass/reset
+@import compass/css3
+
+$box-size: 400px
+$box-margin: 40px
+$border-radius: 10px
+
+*
+	+box-sizing(border-box)
+
+body
+	+background(radial-gradient(bottom,farthest-side circle,#4c6e81,#12161b) #12161b fixed)
+	+box-shadow(inset 0 -10px 10px red)
+
+.features
+	position: fixed
+	left: 50%
+	top: 50%
+	margin-left: -(($box-size*2 + $box-margin)/2)
+	margin-top: -($box-size/2)
+
+.feature
+	width: $box-size
+	height: $box-size
+	+perspective(800)
+	float: left
+	&:first-child
+		margin-right: $box-margin
+		.card
+			+transform-origin(50%, -400%)
+			-webkit-animation: swing ease-in-out 9s
+
+
+.card
+	display: block
+	position: relative
+	width: $box-size
+	height: $box-size
+	+transform-style(preserve-3d)
+	+transform(rotateY(0))
+	+transition(transform 0.75s ease cubic-bezier(0.680, -0.550, 0.265, 1.550))
+	.active &
+		+transform(rotateY(180deg))
+	.inactive &
+		+transform(translateZ(-200px))
+		
+@-webkit-keyframes spin
+	0%
+		+transform(rotateZ(-5deg))
+	100%
+		+transform(rotateZ(0deg))
+
+.face
+	display: block
+	position: absolute
+	width: 100%
+	height: 100%
+	border-radius: $border-radius
+	background-color: white
+	padding: 20px
+	box-shadow: inset 0 0 0 1px rgba(255,255,255,0.7), 0 2px 3px -1px rgba(0,0,0,0.6), inset 0 0 15px -5px rgba(0,0,0,0.5)
+	+background(radial-gradient(rgba(255,255,255,0.2), transparent), linear-gradient(#f6f6f6, #e9e9e9))
+	+backface-visibility(hidden)
+
+.back
+	+transform(rotateY(180deg))
+
+.dimmer
+	height: 100%
+	width: 100%
+	border-radius: $border-radius
+	position: absolute
+	z-index: 2
+	background: black
+	opacity: 0
+	pointer-events: none
+	+transition(opacity 0.5s ease)
+	.inactive &
+		opacity: 0.5
+		pointer-events: auto
+
+input
+	width: 100%
+	border: 1px solid rgba(0,0,0,0.09)
+	+background(linear-gradient(rgba(255,255,255,0.07) rgba(255,255,255,0)), red)
+	+box-shadow(inset 0 0 0 1px rgba(255,255,255,0.2), 0 0 3px rgba(0,0,0,0.3))
+	color: white
+	text-shadow: 1px -1px 0 rgba(0,0,0,0.4)
+	padding: 20px
+	font-size: 36px
+	font-weight: 500
+	cursor: pointer
+	&:hover
+		+background(linear-gradient(rgba(255,255,255,0.07) rgba(255,255,255,0)), darken(red, 1%))
+
+	&:active
+		+background(linear-gradient(rgba(255,255,255,0.07) rgba(255,255,255,0)), darken(red, 2%))
+		
+@-webkit-keyframes swing
+	0%                
+		+transform(rotate(-1deg))
+	10%                
+		+transform(rotate(1deg))
+	20%                
+		+transform(rotate(-0.5deg))
+	30%                
+		+transform(rotate(0deg))
+	40%                
+		+transform(rotate(0deg))
+	80%                
+		+transform(rotate(0deg))
+	90%                
+		+transform(rotate(0deg))
+	100%               
+		+transform(rotate(0deg))

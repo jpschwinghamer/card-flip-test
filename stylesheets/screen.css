@@ -1,0 +1,338 @@
+/* line 17, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, ../sass/screen.sass */
+body {
+  background: -webkit-gradient(radial, 50% 100%, 0, 50% 100%, 100, color-stop(0%, #4c6e81), color-stop(100%, #12161b)) #12161b fixed;
+  background: -webkit-radial-gradient(bottom, farthest-side circle, #4c6e81, #12161b) #12161b fixed;
+  background: -moz-radial-gradient(bottom, farthest-side circle, #4c6e81, #12161b) #12161b fixed;
+  background: -o-radial-gradient(bottom, farthest-side circle, #4c6e81, #12161b) #12161b fixed;
+  background: radial-gradient(bottom, farthest-side circle, #4c6e81, #12161b) #12161b fixed;
+  -webkit-box-shadow: inset 0 -10px 10px red;
+  -moz-box-shadow: inset 0 -10px 10px red;
+  box-shadow: inset 0 -10px 10px red;
+}
+
+/* line 15, ../sass/screen.sass */
+.features {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -420px;
+  margin-top: -200px;
+}
+
+/* line 22, ../sass/screen.sass */
+.feature {
+  width: 400px;
+  height: 400px;
+  -webkit-perspective: 800;
+  -moz-perspective: 800;
+  -ms-perspective: 800;
+  -o-perspective: 800;
+  perspective: 800;
+  float: left;
+}
+/* line 27, ../sass/screen.sass */
+.feature:first-child {
+  margin-right: 40px;
+}
+/* line 29, ../sass/screen.sass */
+.feature:first-child .card {
+  -webkit-transform-origin: 50% -400%;
+  -moz-transform-origin: 50% -400%;
+  -ms-transform-origin: 50% -400%;
+  -o-transform-origin: 50% -400%;
+  transform-origin: 50% -400%;
+  -webkit-animation: swing ease-in-out 9s;
+}
+
+/* line 34, ../sass/screen.sass */
+.card {
+  display: block;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateY(0);
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  transform: rotateY(0);
+  -webkit-transition: -webkit-transform 0.75s ease;
+  -webkit-transition-delay: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-transition: -moz-transform 0.75s ease cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: -o-transform 0.75s ease cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: transform 0.75s ease cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+/* line 42, ../sass/screen.sass */
+.active .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* line 44, ../sass/screen.sass */
+.inactive .card {
+  -webkit-transform: translateZ(-200px);
+  -moz-transform: translateZ(-200px);
+  -ms-transform: translateZ(-200px);
+  -o-transform: translateZ(-200px);
+  transform: translateZ(-200px);
+}
+
+@-webkit-keyframes spin {
+  /* line 48, ../sass/screen.sass */
+  0% {
+    -webkit-transform: rotateZ(-5deg);
+    -moz-transform: rotateZ(-5deg);
+    -ms-transform: rotateZ(-5deg);
+    -o-transform: rotateZ(-5deg);
+    transform: rotateZ(-5deg);
+  }
+
+  /* line 50, ../sass/screen.sass */
+  100% {
+    -webkit-transform: rotateZ(0deg);
+    -moz-transform: rotateZ(0deg);
+    -ms-transform: rotateZ(0deg);
+    -o-transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
+  }
+}
+
+/* line 53, ../sass/screen.sass */
+.face {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 2px 3px -1px rgba(0, 0, 0, 0.6), inset 0 0 15px -5px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 100, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, transparent)), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6f6f6), color-stop(100%, #e9e9e9));
+  background: -webkit-radial-gradient(rgba(255, 255, 255, 0.2), transparent), -webkit-linear-gradient(#f6f6f6, #e9e9e9);
+  background: -moz-radial-gradient(rgba(255, 255, 255, 0.2), transparent), -moz-linear-gradient(#f6f6f6, #e9e9e9);
+  background: -o-radial-gradient(rgba(255, 255, 255, 0.2), transparent), -o-linear-gradient(#f6f6f6, #e9e9e9);
+  background: radial-gradient(rgba(255, 255, 255, 0.2), transparent), linear-gradient(#f6f6f6, #e9e9e9);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 65, ../sass/screen.sass */
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 68, ../sass/screen.sass */
+.dimmer {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+/* line 78, ../sass/screen.sass */
+.inactive .dimmer {
+  opacity: 0.5;
+  pointer-events: auto;
+}
+
+/* line 82, ../sass/screen.sass */
+input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.07)), color-stop(100%, rgba(255, 255, 255, 0))), red;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), red;
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), red;
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), red;
+  background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), red;
+  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-shadow: 1px -1px 0 rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  font-size: 36px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* line 93, ../sass/screen.sass */
+input:hover {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.07)), color-stop(100%, rgba(255, 255, 255, 0))), #fa0000;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #fa0000;
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #fa0000;
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #fa0000;
+  background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #fa0000;
+}
+/* line 96, ../sass/screen.sass */
+input:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.07)), color-stop(100%, rgba(255, 255, 255, 0))), #f50000;
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #f50000;
+  background: -moz-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #f50000;
+  background: -o-linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #f50000;
+  background: linear-gradient(rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0)), #f50000;
+}
+
+@-webkit-keyframes swing {
+  /* line 100, ../sass/screen.sass */
+  0% {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+  }
+
+  /* line 102, ../sass/screen.sass */
+  10% {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+  }
+
+  /* line 104, ../sass/screen.sass */
+  20% {
+    -webkit-transform: rotate(-0.5deg);
+    -moz-transform: rotate(-0.5deg);
+    -ms-transform: rotate(-0.5deg);
+    -o-transform: rotate(-0.5deg);
+    transform: rotate(-0.5deg);
+  }
+
+  /* line 106, ../sass/screen.sass */
+  30% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 108, ../sass/screen.sass */
+  40% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 110, ../sass/screen.sass */
+  80% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 112, ../sass/screen.sass */
+  90% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  /* line 114, ../sass/screen.sass */
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
